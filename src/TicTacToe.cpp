@@ -15,15 +15,9 @@ void TicTacToe::showBoard(char board[9]) {
 }
 
 void TicTacToe::resetBoard(char board[9]) {
-	board[0] = ' ';
-	board[1] = ' ';
-	board[2] = ' ';
-	board[3] = ' ';
-	board[4] = ' ';
-	board[5] = ' ';
-	board[6] = ' ';
-	board[7] = ' ';
-	board[8] = ' ';
+	for (int i = 0; i < 9; i++) {
+		board[i] = ' ';
+	}
 }
 
 int TicTacToe::placeMarker(int pos) {
