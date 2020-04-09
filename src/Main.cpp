@@ -32,8 +32,8 @@ int main() {
 	int firstPlayer, secondPlayer, xWins = 0, oWins = 0;
 	
 	// Turns Logic:
-	// Every even number, Player 1 will move.
-	// Every odd number, Player 2 will move.
+	// Every even number, Player 1 will be able to place X.
+	// Every odd number, Player 2 will be able to place O.
 	int turnCounter = 0;
 	
 	// Main Game Loop:
