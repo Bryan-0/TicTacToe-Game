@@ -32,6 +32,25 @@ bool TicTacToe::isNotFree(int pos, char board[9]) {
 	}
 }
 
+// Checks if every spot of the board is already with an X or O
+bool TicTacToe::isMatchTied(char board[9]) {
+	int counter = 1;
+	
+	for (int i = 0; i < 9; i++) {
+		if (board[i] == 'O' || board[i] == 'X') {
+			counter += 1;
+		} else {
+			counter = 1;
+		}
+	}
+	
+	if (counter % 2 == 0) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
 // Checks if X is aligned in a Horizontal, Vertical or Diagonal way.
 bool TicTacToe::checkXWin(char board[9]) {
 	return (board[0] == 'X' && board[1] == 'X' && board[2] == 'X') || (board[3] == 'X' && board[4] == 'X' && board[5] == 'X') || (board[6] == 'X' && board[7] == 'X' && board[8] == 'X')
